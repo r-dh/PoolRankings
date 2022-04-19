@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DAER - ELO</title>
+
+</head>
+
+<body>
+
+<h2>Rankings:</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Elo</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for rating in ratings %}
+    <tr>
+        {% for _, value in rating.items() %}
+            <td> {{ value }} </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+<h2>Players:</h2>
+ <ul>
+{% for player in players %}
+    <li>{{ player }}</li>
+{% endfor %}
+</ul>
+
+
+<h2> Add player: </h2>
+<form action="/add_player" method="POST">
+    <input name="player">
+    <input type="submit">
+</form>
+
+<h2> Add match: </h2>
+<form action="/record_match" method="POST">
+    <label for="winner">Winnaar:</label>
+    <input name="winner", id="winner">
+
+    <label for="loser">Verliezer:</label>
+    <input name="loser", id="loser">
+
+    <input type="submit">
+</form>
+
+
+
+
+
+
+</body>
+</html>

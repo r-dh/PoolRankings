@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DAER - ELO</title>
+
+</head>
+
+<body>
+
+    <h2>History:</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Winner</th>
+      <th>Loser</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for match in history %}
+    <tr>
+        {% for _, value in match.items() %}
+            <td> {{ value }} </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html>
