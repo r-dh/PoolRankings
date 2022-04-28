@@ -32,6 +32,21 @@
   </tbody>
 </table>
 
+<h2> Add match: </h2>
+<form action="/record_match" method="POST">
+    <label for="winner">Winnaar:</label>
+    <input name="winner", id="winner">
+
+    <label for="loser">Verliezer:</label>
+    <input name="loser", id="loser">
+
+    <input type="submit">
+</form>
+
+<div>
+<img src="/static/images/elo_history.png">
+<p>Image is updated once per day.</p>
+</div>
 
 <h2>Players:</h2>
  <ul>
@@ -47,16 +62,7 @@
     <input type="submit">
 </form>
 
-<h2> Add match: </h2>
-<form action="/record_match" method="POST">
-    <label for="winner">Winnaar:</label>
-    <input name="winner", id="winner">
 
-    <label for="loser">Verliezer:</label>
-    <input name="loser", id="loser">
-
-    <input type="submit">
-</form>
 
 
 
